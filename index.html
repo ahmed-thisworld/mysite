@@ -4,40 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Clothing Shop</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Cart</a></li>
+        <nav class="navbar">
+            <div class="logo">Clothing Shop</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="products">
-            <h2>Products</h2>
-            <div class="product-list">
-                <!-- Product Items will go here -->
-            </div>
-        </section>
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Welcome to Our Clothing Shop</h1>
+            <p>Find the latest fashion trends here!</p>
+            <a href="#shop" class="btn">Shop Now</a>
+        </div>
+    </section>
 
-        <section id="cart">
-            <h2>Shopping Cart</h2>
-            <ul class="cart-items"></ul>
-            <p>Total: <span id="total-price">$0</span></p>
-            <button onclick="checkout()">Checkout</button>
-        </section>
-    </main>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are passionate about bringing the best fashion trends to you.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Clothing Shop</p>
+        <p>© 2024 Clothing Shop. All rights reserved.</p>
     </footer>
-
-    <script src="app.js"></script>
 </body>
 </html>
