@@ -3,22 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Kalam", cursive;
     line-height: 1.6;
+   
+}img {
+    width: 100%;
 }
+.kalam-light {
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .kalam-regular {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  
+
 
 header {
-    background-color: #333;
-    color: #fff;
     padding: 10px 0;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    justify-content: center;
     padding: 0 20px;
 }
 
@@ -32,7 +51,7 @@ header {
 }
 
 .nav-links a {
-    color: #fff;
+    color: brown;
     text-decoration: none;
 }
 
@@ -43,18 +62,23 @@ header {
 }
 
 .home {
-    background: url('banner.jpg') no-repeat center center/cover;
-    height: 100vh;
+ 
+ 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+   
     text-align: center;
 }
-
+.home-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
 .home-content h1 {
-    font-size: 50px;
+    font-size: 100px;
     margin-bottom: 20px;
+    text-align: left;line-height: 0.8;
 }
 
 .home-content .btn {
@@ -89,7 +113,9 @@ header {
     border: none;
     cursor: pointer;
 }
-
+.social-icons img {
+    max-width: 25px;
+}
 footer {
     text-align: center;
     padding: 10px;
@@ -99,7 +125,16 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
+.logo {
+    text-align: center;
+}
+.logo img {
+    max-width: 100px;
+}
+section, footer, header {
+    max-width: 95%;
+    margin: auto;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .navbar {
@@ -107,10 +142,13 @@ footer {
     }
 
     .nav-links {
-        flex-direction: column;
+ 
         margin-top: 10px;
     }
+    .home-content {
 
+        grid-template-columns: 1fr;
+    }
     .home-content h1 {
         font-size: 30px;
     }
